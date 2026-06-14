@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Signup</title>
+
+<link rel="stylesheet" href="NewFile1.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+🔒
+</div>
+
+<h1>User Signup</h1>
+
+<p>Create your account</p>
+
+<form action="Myservlet" method="post">
+
+<label>Name</label>
+<input type="text"
+name="username"
+placeholder="Enter Name"
+required>
+
+<label>Email Address</label>
+<input type="email"
+name="email"
+placeholder="name@company.com"
+required>
+
+<label>Phone</label>
+<input type="text"
+name="phone"
+placeholder="Enter phone number"
+required>
+
+<label>Password</label>
+<input type="password"
+name="password"
+placeholder="Enter Password"
+required>
+
+
+<p id="errorMessage"></p>
+
+<script>
+
+const params=
+new URLSearchParams(
+window.location.search
+);
+
+const error=
+params.get("error");
+
+if(error){
+
+document.getElementById(
+"errorMessage"
+).innerText=error;
+
+}
+
+</script>
+
+
+<input type="submit"
+value="Signup →">
+
+</form>
+
+<div class="loginLink">
+
+Already have an account?
+
+<a href="login.html">
+Login
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

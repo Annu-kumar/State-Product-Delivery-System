@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+
+<link rel="stylesheet" href="NewFile.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+🔒
+</div>
+
+<h1>Welcome Back</h1>
+
+<p>Enter your credentials</p>
+
+<form action="LoginServlet" method="post">
+
+<label>Email Address</label>
+
+<input type="email"
+name="email"
+placeholder="name@company.com"
+required>
+
+<label>Password</label>
+
+<div class="passwordBox">
+
+<input type="password"
+id="password"
+name="password"
+placeholder="Enter Password"
+required>
+
+<span class="eye"
+onclick="togglePassword()">
+👁️
+</span>
+
+</div>
+
+<p id="errorMessage"></p>
+
+<div class="forgotLink">
+
+<a href="forgotpassword.html">
+Forgot Password?
+</a>
+
+</div>
+
+<input type="submit"
+value="Login →">
+
+</form>
+
+<div class="loginLink">
+
+Don't have an account?
+
+<a href="NewFile.html">
+Signup
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+const params =
+new URLSearchParams(
+window.location.search
+);
+
+const error =
+params.get("error");
+
+if(error){
+
+document.getElementById(
+"errorMessage"
+).innerText=error;
+
+window.history.replaceState(
+{},
+document.title,
+window.location.pathname
+);
+
+}
+
+function togglePassword(){
+
+let passwordField=
+document.getElementById(
+"password"
+);
+
+if(passwordField.type==="password"){
+
+passwordField.type="text";
+
+}
+else{
+
+passwordField.type="password";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

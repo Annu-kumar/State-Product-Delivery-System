@@ -1,0 +1,32 @@
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#f4f6ff;
+font-family:Arial,sans-serif;
+}
+
+.successBox{
+background:white;
+padding:50px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,0,0,.2);
+text-align:center;
+}
+
+.tick{
+font-size:80px;
+color:green;
+margin-bottom:20px;
+}
+
+.successBox h1{
+color:#003b9b;
+}
+
+.successBox p{
+font-size:18px;
+color:#555;
+}
